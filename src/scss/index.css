@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rubik:ital,wght@0,300;0,400;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: [full-start] minmax(5rem, 9rem) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(5rem, 9rem) [full-end];
+}
+
+.Grab {
+  background-color: aquamarine;
+  grid-column: full-start/full-end;
+}
+
+.ParametersAndLinks {
+  background-color: bisque;
+  grid-column: center-start/center-end;
+}
+
+.Header {
+  background-color: azure;
+  grid-column: center-start/center-end;
+}
+
+.TrandingSlider {
+  background-color: cadetblue;
+  grid-column: center-start/center-end;
+}
+
+.BestTitle {
+  background-color: aliceblue;
+  grid-column: center-start/center-end;
+}
+
+.TopToday {
+  background-color: blueviolet;
+  grid-column: center-start/col-end 5;
+}
+
+.TrendingAndRecent {
+  background-color: burlywood;
+  grid-column: col-start 6/center-end;
+}
+
+.SliderNews {
+  background-color: blanchedalmond;
+  grid-column: center-start/center-end;
+}
+
+.Contact {
+  background-color: antiquewhite;
+  grid-column: full-start/full-end;
+}
+
+.Links {
+  background-color: beige;
+  grid-column: full-start/full-end;
+}
+
+.Footer {
+  background-color: aqua;
+  grid-column: full-start/full-end;
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rubik:ital,wght@0,300;0,400;1,300&display=swap');
+// fonts for the project
+$titles-font-family: 'Nunito Sans', sans-serif;
+$paragraphs-font-family: 'Rubik', sans-serif;
+//fonts colors
+$black-color: #191A1F;
+$white-color: #fff;
+$gray-color: #595D69;
+//general background colors
+$primary-color: #2164E8;
+$secondary-color: #E9EFFD;
+$tertiary-color: #191A1F;
+$quaternary-color: #111216;
+//tags background colors
+$subscribe-color: #D7293D;
+$trending-color: #2164E8;
+$technology-color: #F7C32D;
+$lifestyle-color: #D7293D;
+$business-color: #0FBC87;
+$sport-color: #509EF8;
+// restyling the root
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;//1rem = 10px
+}
+// because of we work with react we need to set the height and width of the App to 100%
+.App {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: [full-start] minmax(5rem,9rem) [center-start] repeat(8, [col-start]1fr[col-end]) [center-end] minmax(5rem,9rem) [full-end];
+}
