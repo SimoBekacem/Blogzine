@@ -10,7 +10,6 @@ html {
 }
 
 .App {
-  height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   display: grid;
@@ -18,13 +17,108 @@ html {
 }
 
 .Grab {
-  background-color: aquamarine;
   grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: 58% 40%;
+  gap: 2rem;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(339deg, rgb(131, 58, 180) 0%, rgb(255, 16, 16) 50%, rgb(252, 176, 69) 100%);
+  padding: 0.5rem;
+}
+.Grab__title {
+  justify-self: end;
+  align-self: center;
+}
+.Grab__title h1 {
+  font-size: 1.75rem;
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: lighter;
+}
+.Grab__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Grab__btn button {
+  background-color: #191A1F;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: #191A1F;
+  font-size: 1.25rem;
+}
+.Grab__btn i {
+  color: #fff;
+  font-size: 3rem;
+  float: right;
+  padding: 0.25rem;
 }
 
 .ParametersAndLinks {
-  background-color: bisque;
   grid-column: center-start/center-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid #595D69;
+}
+.ParametersAndLinks a {
+  color: #595D69;
+  font-size: 2rem;
+}
+.ParametersAndLinks a:hover {
+  color: #191A1F;
+}
+.ParametersAndLinks__links {
+  display: flex;
+  gap: 2rem;
+}
+.ParametersAndLinks__links a {
+  text-decoration: none;
+  font-size: 1.45rem;
+  color: #595D69;
+}
+.ParametersAndLinks__links a:hover {
+  color: #191A1F;
+}
+.ParametersAndLinks__parameters {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.ParametersAndLinks__parameters__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #2164E8;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+.ParametersAndLinks__parameters__item h1 {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  color: #2164E8;
+  margin: 0;
+  cursor: pointer;
+}
+.ParametersAndLinks__parameters .dropdown-center ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0.75rem;
+}
+.ParametersAndLinks__parameters .dropdown-center ul li p {
+  margin: 0;
+}
+.ParametersAndLinks__parameters .dropdown-center button {
+  background-color: transparent;
+  font-size: 1.5rem;
+  background-color: #F7C32D;
+  border-radius: 50%;
+  color: #191A1F;
+  border: none;
 }
 
 .Header {
