@@ -308,18 +308,349 @@ html {
 }
 
 .BestTitle {
-  background-color: aliceblue;
   grid-column: center-start/center-end;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  margin-bottom: 4rem;
+}
+.BestTitle__item1 {
+  background: linear-gradient(rgba(25, 26, 31, 0.3), rgba(25, 26, 31, 0.3)), url(/src/images/best_title1.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 30rem 2rem 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.BestTitle__item1__link {
+  text-decoration: none;
+  color: #191A1F;
+}
+.BestTitle__item1__link__tag {
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #D7293D;
+  width: min-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.BestTitle__item1__link__title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.BestTitle__item1__link__text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+}
+.BestTitle__item1__link__autor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+  margin-top: 1rem;
+}
+.BestTitle__item1__link__autor li:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.BestTitle__item1__link__autor li:nth-child(1) img {
+  width: 5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.BestTitle__item1:hover {
+  scale: 1.05;
+}
+.BestTitle__item2 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.BestTitle__item2 a {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  padding: 14rem 1rem 0 1rem;
+  transition: all 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.BestTitle__item2 a:hover {
+  scale: 1.05;
+}
+.BestTitle__item2 a ul {
+  display: flex;
+  justify-content: space-around;
+}
+.BestTitle__item2__link1 {
+  background: linear-gradient(rgba(25, 26, 31, 0.3), rgba(25, 26, 31, 0.3)), url(/src/images/best_title2.jpg);
+  grid-column: 1/-1;
+}
+.BestTitle__item2__link1__tagt {
+  color: #191A1F;
+  background-color: #F7C32D;
+  font-size: 1.5rem;
+  width: min-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.BestTitle__item2__link2 {
+  grid-column: 1/2;
+  background: linear-gradient(rgba(25, 26, 31, 0.3), rgba(25, 26, 31, 0.3)), url(/src/images/best_title3.jpg);
+}
+.BestTitle__item2__link2 h1 {
+  font-size: 2rem;
+}
+.BestTitle__item2__link2__tagt {
+  color: #fff;
+  background-color: #0FBC87;
+  font-size: 1.5rem;
+  width: min-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.BestTitle__item2__link3 {
+  grid-column: 2/3;
+  background: linear-gradient(rgba(25, 26, 31, 0.3), rgba(25, 26, 31, 0.3)), url(/src/images/best_title4.jpg);
+}
+.BestTitle__item2__link3 h1 {
+  font-size: 2rem;
+}
+.BestTitle__item2__link3__tagt {
+  color: #fff;
+  background-color: #509EF8;
+  font-size: 1.5rem;
+  width: min-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .TopToday {
-  background-color: blueviolet;
   grid-column: center-start/col-end 5;
+  padding: 2rem;
+}
+.TopToday__title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #191A1F;
+  margin-bottom: 0.5rem;
+}
+.TopToday__title h2 i {
+  margin: 1rem;
+}
+.TopToday__title p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #595D69;
+}
+.TopToday__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+}
+.TopToday__items__item__img {
+  position: relative;
+}
+.TopToday__items__item__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.TopToday__items__item__img__catigory {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(33, 100, 232, 0.5);
+  color: #fff;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.TopToday__items__item__text__autor {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #595D69;
+}
+.TopToday__items__item__text__autor img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.TopToday__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 0 0 0;
+}
+.TopToday__button button {
+  padding: 1rem 2rem;
+  background-color: rgba(33, 100, 232, 0.3);
+  border: none;
+  color: #2164E8;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+}
+.TopToday__button button:hover {
+  background-color: #2164e8;
+  color: #fff;
 }
 
 .TrendingAndRecent {
-  background-color: burlywood;
   grid-column: col-start 6/center-end;
+  padding: 2rem;
+}
+.TrendingAndRecent__socialmedia {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  color: #fff;
+}
+.TrendingAndRecent__socialmedia i {
+  font-size: 2rem;
+  transition: all 0.4s ease-in-out;
+  margin: 0;
+}
+.TrendingAndRecent__socialmedia div {
+  width: 31%;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+}
+.TrendingAndRecent__socialmedia div h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.TrendingAndRecent__socialmedia div p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.TrendingAndRecent__socialmedia div h1, .TrendingAndRecent__socialmedia div p {
+  margin: 0;
+}
+.TrendingAndRecent__socialmedia__facebook {
+  background-color: #5D82D1;
+}
+.TrendingAndRecent__socialmedia__instagram {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.TrendingAndRecent__socialmedia__youtube {
+  background-color: #FF0000;
+}
+.TrendingAndRecent__trending__title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 1rem;
+}
+.TrendingAndRecent__trending__topics {
+  text-align: center;
+}
+.TrendingAndRecent__trending__topics h1 {
+  padding: 2rem;
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+}
+.TrendingAndRecent__trending__topics div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+.TrendingAndRecent__trending__topics__travel {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/00.jpg);
+}
+.TrendingAndRecent__trending__topics__bussiness {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/01.jpg);
+}
+.TrendingAndRecent__trending__topics__marketing {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/03.jpg);
+}
+.TrendingAndRecent__trending__topics__photography {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/04.jpg);
+}
+.TrendingAndRecent__trending__topics__sport {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/06.jpg);
+}
+.TrendingAndRecent__trending__topics a {
+  text-decoration: none;
+  color: #191A1F;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 4rem;
+  transition: all 0.4s ease-in-out;
+}
+.TrendingAndRecent__trending__topics a:hover {
+  color: #2164E8;
+}
+.TrendingAndRecent__recent {
+  margin-top: 5rem;
+}
+.TrendingAndRecent__recent__posts {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.TrendingAndRecent__recent__posts__post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.TrendingAndRecent__recent__posts__post__image {
+  display: flex;
+  justify-content: center;
+}
+.TrendingAndRecent__recent__posts__post__image img {
+  width: 60%;
+  border-radius: 1rem;
+}
+.TrendingAndRecent__recent__posts__post__content {
+  width: 100%;
+}
+.TrendingAndRecent__recent__posts__post__content h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+.TrendingAndRecent__recent__posts__post__content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+.TrendingAndRecent__recent__posts__post__content a {
+  text-decoration: none;
+  color: #191A1F;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  transition: all 0.4s ease-in-out;
+}
+.TrendingAndRecent__recent__posts__post__content a:hover {
+  color: #2164E8;
 }
 
 .SliderNews {
