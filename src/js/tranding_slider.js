@@ -36,7 +36,6 @@ const TrandingSlider = () => {
         }, 5000);
         return () => clearInterval(interval);
     }, []);
-    console.log(counter*100);
     return (
         <div className='TrandingSlider'>
             <button className='TrandingSlider__button'>Tranding:</button>

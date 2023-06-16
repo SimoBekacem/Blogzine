@@ -17,14 +17,14 @@ const Header__Pages = () => {
                 <li><a className="dropdown-item" href="#">Singin</a></li>
                 <li><a className="dropdown-item" href="#">Singup</a></li>
                 <li><a className="dropdown-item" href="#">Pffline</a></li>
-                <li><hr class="dropdown-divider"/></li>
+                <li><hr className="dropdown-divider"/></li>
                 <DropdownLevels />
-                <li><hr class="dropdown-divider"/></li>
-                <li><a className="dropdown-item" href="#"><span className='orange'><i class="fa-solid fa-life-ring"></i></span>Suppor</a></li>
-                <li><a className="dropdown-item" href="#"><span className='red'><i class="fa-solid fa-book"></i></span>Documentation</a></li>
-                <li><hr class="dropdown-divider"/></li>
-                <li><a className="dropdown-item" href="#"><span className='red'><i class="fa-solid fa-toggle-off"></i></span>RTL Demo</a></li>
-                <li><a className="dropdown-item" href="#"><span className='red'><i class="fa-solid fa-cloud-arrow-down"></i></span>Buy Blogzine!</a></li>
+                <li><hr className="dropdown-divider"/></li>
+                <li><a className="dropdown-item" href="#"><span className='orange'><i className="fa-solid fa-life-ring"></i></span>Suppor</a></li>
+                <li><a className="dropdown-item" href="#"><span className='red'><i className="fa-solid fa-book"></i></span>Documentation</a></li>
+                <li><hr className="dropdown-divider"/></li>
+                <li><a className="dropdown-item" href="#"><span className='red'><i className="fa-solid fa-toggle-off"></i></span>RTL Demo</a></li>
+                <li><a className="dropdown-item" href="#"><span className='red'><i className="fa-solid fa-cloud-arrow-down"></i></span>Buy Blogzine!</a></li>
             </ul>
         </li>
     )

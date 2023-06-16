@@ -7,7 +7,7 @@ const Header__sidebar = () => {
         <div className="Header__sidebar">
             <i className="Header__sidebar__icon fa-solid fa-bars-staggered fa-rotate-180" onClick={showSidebar}></i>
             <div className={`Header__sidebar__window ${sidebar? "showed" : "hidden"}`}>
-                <i class="close fa-solid fa-xmark" onClick={showSidebar}></i>
+                <i className="close fa-solid fa-xmark" onClick={showSidebar}></i>
                 <div className='description'>
                     <a className="navbar-brand Header__logo" href="#"><img src={logo} width='50px'/><h1>ZINE</h1></a>
                     <p>

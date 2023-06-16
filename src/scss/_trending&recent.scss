@@ -1,8 +1,11 @@
 .TrendingAndRecent{
-    grid-column: col-start 6 / center-end ;   
+    grid-column: col-start 6 / center-end ;  
     padding: 2rem;
+    @media only screen and (max-width: $small-screen){
+        grid-column: center-start / center-end ; 
+    }
     &__socialmedia{
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;

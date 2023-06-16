@@ -2,12 +2,12 @@ import React from 'react';
 import NewsSlides from './objects/NewsSlides';
 const SliderNews = () => {
     const [counter, setCounter] = React.useState(0);
-    console.log(counter);
     const newslist = NewsSlides.map((news,index) => {
+        const translation = window.screen.width <= 770 ? 50 : 25;
         let new_img = require(`../images/${news.img}`);
         let autor_img = require(`../images/${news.autor_img}`);
         return(
-            <div key={news.id} style={{left:`${index*25}%`,transform:`translateX(${counter*100}%)`}} className='SliderNews__slidercontainer__slide'>
+            <div key={news.id} style={{left:`${index*translation}%`,transform:`translateX(${counter*100}%)`}} className='SliderNews__slidercontainer__slide'>
                 <div className='SliderNews__slidercontainer__slide__image'> 
                     <img src={new_img} alt={news.title}/>
                     <span>{news.tag}</span>
@@ -33,6 +33,9 @@ const SliderNews = () => {
     })
     
     const handleCounter = (side) => {
+        if(window.screen.width <= 770){
+            const sign = side === 'left' ? -2 : 2;
+        }
         const sign = side === 'left' ? -1 : 1;
         setCounter(prevcounter => {
             if(prevcounter === -2 && side === 'left'){
@@ -52,7 +55,7 @@ const SliderNews = () => {
     return (
         <div className='SliderNews'>
             <div className='SliderNews__title'>
-                <h1><i class="fa-solid fa-bullhorn"></i>Sponsored news</h1>
+                <h1><i className="fa-solid fa-bullhorn"></i>Sponsored news</h1>
                 <p>News from our sponsors</p>
             </div>
             <div className='SliderNews__slidercontainer'>

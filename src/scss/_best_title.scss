@@ -2,7 +2,7 @@
     grid-column: center-start / center-end ;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     margin-bottom: 4rem;
     &__item1{
         background: linear-gradient(rgba($black-color,0.3),rgba($black-color,0.3)),url(/src/images/best_title1.jpg);

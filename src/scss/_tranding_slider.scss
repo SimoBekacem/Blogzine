@@ -8,6 +8,11 @@
     padding: 0.25rem 0.75rem;
     border-radius: 0.5rem;
     margin-bottom: 3rem;
+    @media only screen and (max-width: $small-screen){
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
     button{
         width: 10rem;
         border-radius: 0.5rem;
@@ -16,15 +21,19 @@
         border: none;
         background-color: $trending-color;
         color: $white-color;
+        margin: 0 auto;
     }
     &__slider{
-        height: 4rem;
+        height: 5rem;
         width: 80%;
         position: relative;
         overflow: hidden;
         display: flex;
         align-items: center;
         transition: $transition;
+        @media only screen and (max-width: $small-screen){
+            width: 100%;
+        }
         p{
             transform: translateX(-200%);
             position: absolute;
@@ -33,11 +42,16 @@
             height: 100%;
             padding: 1.25rem;
             font-size: 1.5rem;
+            margin: 0;
+            @media only screen and (max-width: $very-small-screen){
+                margin-top: -1rem;
+            }
         }
     }
     &__buttons{
         display: flex;
         gap: 1rem;
+        margin: 0 auto;
         i{
             font-size: 2rem;
             z-index: 100000;

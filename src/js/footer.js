@@ -4,11 +4,11 @@ const Footer = () => {
         <div className='Footer'>
             <p className='Footer__text'>&copy; 2023 MB1. All rights reserved. Made with <span className='Footer__heart'>♥</span> by Mohamed Belkacem</p>
             <div className='Footer__links'>
-                <div class="btn-group dropup-center">
-                    <button type="button" class="btn btn-secondary " data-bs-toggle="dropdown" aria-expanded="false">
+                <div className="btn-group dropup-center">
+                    <button type="button" className="btn btn-secondary " data-bs-toggle="dropdown" aria-expanded="false">
                         English
                     </button>
-                    <ul class="Footer__links__languages dropdown-menu">
+                    <ul className="Footer__links__languages dropdown-menu">
                         <li>Arabic</li>
                         <li>English</li>
                         <li>French</li>

@@ -19,8 +19,8 @@ const ParametersAndLinks = () => {
                         <i className="fa-solid fa-circle-half-stroke"></i>
                     </button>
                     <ul className="dropdown-menu">
-                        <li><i class="fa-regular fa-sun"></i><p>Light</p></li>
-                        <li><i class="fa-solid fa-moon"></i><p>Dark</p></li>
+                        <li><i className="fa-regular fa-sun"></i><p>Light</p></li>
+                        <li><i className="fa-solid fa-moon"></i><p>Dark</p></li>
                         <li><i className="fa-solid fa-circle-half-stroke"></i><p>Auto</p></li>
                     </ul>
                 </div>

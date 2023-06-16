@@ -20,6 +20,12 @@ $business-color: #0FBC87;
 $sport-color: #509EF8;
 // transition
 $transition: all 0.4s ease-in-out;
+// screen sizes:
+$very-small-screen: 31.25em;//mobile 500px
+$small-screen: 48.125em;//mobile 770px
+$medium-screen: 56.25em;//tablet 900px
+$large-screen: 64em;//desktop 1024px
+$extra-large-screen: 1800px;//large desktop
 // restyling the root
 * {
     margin: 0;
@@ -28,11 +34,21 @@ $transition: all 0.4s ease-in-out;
 }
 html {
     font-size: 62.5%;//1rem = 10px
+    @media only screen and (max-width: $large-screen) {
+        font-size: 50%;//1rem = 8px
+    }
+    @media only screen and (max-width: 346px) {
+        font-size: 37.5%;//1rem = 6px
+    }
 }
 // because of we work with react we need to set the height and width of the App to 100%
 .App {
     width: 100vw;
     overflow-x: hidden;
     display: grid;
-    grid-template-columns: [full-start] minmax(5rem,9rem) [center-start] repeat(8, [col-start]1fr[col-end]) [center-end] minmax(5rem,9rem) [full-end];
+    grid-template-columns: [full-start] minmax(3rem,1fr) [center-start] repeat(8, [col-start]1fr[col-end]) [center-end] minmax(3rem,1fr) [full-end];
+    @media only screen and (max-width: $very-small-screen) {
+        grid-template-columns: [full-start] 1rem [center-start] repeat(8, [col-start]1fr[col-end]) [center-end] 1rem [full-end];
+
+    }
 }

@@ -1,6 +1,9 @@
 .TopToday{
     grid-column: center-start / col-end 5 ;
     padding:2rem;
+    @media only screen and (max-width: $small-screen){
+        grid-column: center-start / center-end ; 
+    }
     &__title{
         h2{
             i{
@@ -19,7 +22,7 @@
     }
     &__items{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
         grid-gap: 2rem;
         &__item{
             &__img{

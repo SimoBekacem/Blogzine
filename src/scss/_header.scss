@@ -1,6 +1,7 @@
 .Header{
-    grid-column: center-start / center-end ;
+    grid-column: full-start / full-end ;
     padding: 2rem;
+    display: block;
     &__logo{
         display: flex;
         gap: 0.25rem;
@@ -18,6 +19,10 @@
     &__dropdowns{
         margin: 0 auto;
         gap: 1.5rem;
+        @media only screen and (max-width: $medium-screen){
+            gap:0;
+            margin: 0 1rem;
+        }
         a{
             font-size: 1.5rem;
         }
@@ -99,6 +104,9 @@
             display: grid;
             grid-template-columns: 1fr;
             padding: 0 2.5rem;
+            @media only screen and (max-width: $very-small-screen) {
+                width: 100vw;
+            }
             &--hidden{
                 display: none;
             }
@@ -173,6 +181,10 @@
         }
     }
     &__Lifestyle{
+        
+        @media only screen and (max-width:642px) {
+            display: none;
+        }
         &__minipage{
             width: 100%;
             z-index: 1000000;
@@ -197,7 +209,7 @@
                     button{
                         height: 3rem;
                         padding: 0.5rem;
-                        width: 16rem;
+                        width: max-content;
                         margin: 1rem auto;
                         color: $black-color;
                         background-color: $technology-color;

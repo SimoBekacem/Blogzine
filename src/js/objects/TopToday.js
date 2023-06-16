@@ -44,7 +44,7 @@ const TopTodayObject = [
         autor_image:"per4.jpg"
     },
     {
-        id: 4,
+        id: 5,
         image: "00.jpg",  
         catigory:"Soprt",
         isSponsored: false,
@@ -55,7 +55,7 @@ const TopTodayObject = [
         autor_image:"per5.jpg"
     },
     {
-        id: 4,
+        id: 6,
         image: "12.jpg",  
         catigory:"Soprt",
         isSponsored: false,

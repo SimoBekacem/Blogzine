@@ -31,14 +31,14 @@ const TopToday = () => {
     return (
         <div className='TopToday'>
             <div className='TopToday__title'>
-                <h2><i class="fa-solid fa-hourglass-start"></i>Today's top highlights</h2>
+                <h2><i className="fa-solid fa-hourglass-start"></i>Today's top highlights</h2>
                 <p>Latest breaking news, pictures, videos, and special reports</p>
             </div>
             <div className='TopToday__items'>
                 {TopTodayItems}
             </div>
             <div className='TopToday__button'>
-                <button>Load more post <i class="fa-solid fa-circle-arrow-down"></i></button>
+                <button>Load more post <i className="fa-solid fa-circle-arrow-down"></i></button>
             </div>
         </div>
     )

@@ -8,12 +8,27 @@
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 346px) {
+  html {
+    font-size: 37.5%;
+  }
+}
 
 .App {
   width: 100vw;
   overflow-x: hidden;
   display: grid;
-  grid-template-columns: [full-start] minmax(5rem, 9rem) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(5rem, 9rem) [full-end];
+  grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 31.25em) {
+  .App {
+    grid-template-columns: [full-start] 1rem [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] 1rem [full-end];
+  }
 }
 
 .Grab {
@@ -67,6 +82,11 @@ html {
   align-items: center;
   padding: 1rem 0;
   border-bottom: 2px solid #595D69;
+}
+@media only screen and (max-width: 56.25em) {
+  .ParametersAndLinks {
+    display: none;
+  }
 }
 .ParametersAndLinks a {
   color: #595D69;
@@ -127,8 +147,9 @@ html {
 }
 
 .Header {
-  grid-column: center-start/center-end;
+  grid-column: full-start/full-end;
   padding: 2rem;
+  display: block;
 }
 .Header__logo {
   display: flex;
@@ -147,6 +168,12 @@ html {
 .Header__dropdowns {
   margin: 0 auto;
   gap: 1.5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .Header__dropdowns {
+    gap: 0;
+    margin: 0 1rem;
+  }
 }
 .Header__dropdowns a {
   font-size: 1.5rem;
@@ -220,6 +247,11 @@ html {
   grid-template-columns: 1fr;
   padding: 0 2.5rem;
 }
+@media only screen and (max-width: 31.25em) {
+  .Header__sidebar__window {
+    width: 100vw;
+  }
+}
 .Header__sidebar__window--hidden {
   display: none;
 }
@@ -291,6 +323,11 @@ html {
 .Header__sidebar__window .informations p {
   margin: 0 1rem;
 }
+@media only screen and (max-width: 642px) {
+  .Header__Lifestyle {
+    display: none;
+  }
+}
 .Header__Lifestyle__minipage {
   width: 100%;
   z-index: 1000000;
@@ -318,7 +355,7 @@ html {
 .Header__Lifestyle__minipage__container .card button {
   height: 3rem;
   padding: 0.5rem;
-  width: 16rem;
+  width: max-content;
   margin: 1rem auto;
   color: #191A1F;
   background-color: #F7C32D;
@@ -395,6 +432,13 @@ html {
   border-radius: 0.5rem;
   margin-bottom: 3rem;
 }
+@media only screen and (max-width: 48.125em) {
+  .TrandingSlider {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
 .TrandingSlider button {
   width: 10rem;
   border-radius: 0.5rem;
@@ -403,15 +447,21 @@ html {
   border: none;
   background-color: #2164E8;
   color: #fff;
+  margin: 0 auto;
 }
 .TrandingSlider__slider {
-  height: 4rem;
+  height: 5rem;
   width: 80%;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   transition: all 0.4s ease-in-out;
+}
+@media only screen and (max-width: 48.125em) {
+  .TrandingSlider__slider {
+    width: 100%;
+  }
 }
 .TrandingSlider__slider p {
   transform: translateX(-200%);
@@ -421,10 +471,17 @@ html {
   height: 100%;
   padding: 1.25rem;
   font-size: 1.5rem;
+  margin: 0;
+}
+@media only screen and (max-width: 31.25em) {
+  .TrandingSlider__slider p {
+    margin-top: -1rem;
+  }
 }
 .TrandingSlider__buttons {
   display: flex;
   gap: 1rem;
+  margin: 0 auto;
 }
 .TrandingSlider__buttons i {
   font-size: 2rem;
@@ -436,7 +493,7 @@ html {
   grid-column: center-start/center-end;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   margin-bottom: 4rem;
 }
 .BestTitle__item1 {
@@ -566,6 +623,11 @@ html {
   grid-column: center-start/col-end 5;
   padding: 2rem;
 }
+@media only screen and (max-width: 48.125em) {
+  .TopToday {
+    grid-column: center-start/center-end;
+  }
+}
 .TopToday__title h2 {
   font-size: 3rem;
   font-weight: 700;
@@ -582,7 +644,7 @@ html {
 }
 .TopToday__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2rem;
 }
 .TopToday__items__item__img {
@@ -642,8 +704,13 @@ html {
   grid-column: col-start 6/center-end;
   padding: 2rem;
 }
+@media only screen and (max-width: 48.125em) {
+  .TrendingAndRecent {
+    grid-column: center-start/center-end;
+  }
+}
 .TrendingAndRecent__socialmedia {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -816,6 +883,11 @@ html {
   width: 25%;
   transition: all 0.4s ease-in-out;
   padding: 1rem;
+}
+@media only screen and (max-width: 48.125em) {
+  .SliderNews__slidercontainer__slide {
+    width: 50%;
+  }
 }
 .SliderNews__slidercontainer__slide__image {
   position: relative;

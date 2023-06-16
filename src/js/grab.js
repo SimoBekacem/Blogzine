@@ -11,7 +11,7 @@ const Grab = () => {
             </div>
             <div className='Grab__btn'>
                 <button>Grab new!</button>
-                <i class="fa-solid fa-xmark" onClick={close}></i>
+                <i className="fa-solid fa-xmark" onClick={close}></i>
             </div>
         </div>
     )

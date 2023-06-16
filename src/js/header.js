@@ -7,7 +7,7 @@ import Header__Lifestyle from './Header__Lifestyle';
 import Header__sidebar from './Header__sidebar';
 const Header = () => {
     return (
-        <nav className="Header navbar navbar-expand-lg ">
+        <nav className="Header navbar navbar-expand-md">
             <div className="container-fluid">
                 <a className="navbar-brand Header__logo" href="#"><img src={logo} width='50px'/><h1>ZINE</h1></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

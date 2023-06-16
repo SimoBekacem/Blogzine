@@ -26,7 +26,7 @@ const TrendingAndRecent = () => {
                 <div className='TrendingAndRecent__socialmedia__instagram'>
                     <i className="fab fa-instagram"></i>
                     <h1>1.8M</h1>
-                    <p>Followers</p>
+                    <p>Follos</p>
                 </div>
                 <div className='TrendingAndRecent__socialmedia__youtube'>
                     <i className="fab fa-youtube"></i>

@@ -26,7 +26,7 @@ const Links = () => {
                 </div>
                 <div className='Links__Navigation'>
                     <h1>Navigation</h1>
-                    <div class="Links__Navigation__links">
+                    <div className="Links__Navigation__links">
                         <ul>
                             <li><a>Features</a></li>
                             <li><a>Style Guide</a></li>
@@ -50,11 +50,11 @@ const Links = () => {
                 <div className='Links__social'>
                     <h1>Get Regular Updates</h1>
                     <ul>
-                        <li><i class="fa-brands fa-square-whatsapp"></i><a>Youtube</a></li>
-                        <li><i class="fa-brands fa-square-youtube"></i><a>Facebook</a></li>
-                        <li><i class="fa-solid fa-bell"></i><a>Website Notifications</a></li>
-                        <li><i class="fa-solid fa-envelope"></i><a>Newsletters</a></li>
-                        <li><i class="fa-solid fa-podcast"></i><a>Podcasts</a></li>
+                        <li><i className="fa-brands fa-square-whatsapp"></i><a>Youtube</a></li>
+                        <li><i className="fa-brands fa-square-youtube"></i><a>Facebook</a></li>
+                        <li><i className="fa-solid fa-bell"></i><a>Website Notifications</a></li>
+                        <li><i className="fa-solid fa-envelope"></i><a>Newsletters</a></li>
+                        <li><i className="fa-solid fa-podcast"></i><a>Podcasts</a></li>
                     </ul>
                 </div>
                 <div className='Links__mobileapp'>
