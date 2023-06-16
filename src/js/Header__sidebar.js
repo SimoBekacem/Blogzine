@@ -1,11 +1,13 @@
 import React from 'react';
 import logo from '../images/logo.png';
 const Header__sidebar = () => {
+    const [sidebar, setSidebar] = React.useState(false);
+    const showSidebar = () => setSidebar(!sidebar);
     return (
         <div className="Header__sidebar">
-            <i className="Header__sidebar__icon fa-solid fa-bars-staggered fa-rotate-180"></i>
-            <div className="Header__sidebar__window-hidden">
-                <i class="close fa-solid fa-xmark"></i>
+            <i className="Header__sidebar__icon fa-solid fa-bars-staggered fa-rotate-180" onClick={showSidebar}></i>
+            <div className={`Header__sidebar__window ${sidebar? "showed" : "hidden"}`}>
+                <i class="close fa-solid fa-xmark" onClick={showSidebar}></i>
                 <div className='description'>
                     <a className="navbar-brand Header__logo" href="#"><img src={logo} width='50px'/><h1>ZINE</h1></a>
                     <p>

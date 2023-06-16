@@ -1,8 +1,4 @@
 .Grab{
-    grid-column: full-start / full-end ;
-    display: grid;
-    grid-template-columns: 58% 40%;
-    gap: 2rem;
     background: rgb(131,58,180);
     background: linear-gradient(339deg, rgba(131,58,180,1) 0%, rgba(255,16,16,1) 50%, rgba(252,176,69,1) 100%); 
     padding: 0.5rem;
@@ -35,5 +31,14 @@
             float: right;
             padding: 0.25rem;
         }
+    }
+    &__active{
+        display: grid;
+        grid-column: full-start / full-end ;
+        grid-template-columns: 58% 40%;
+        gap: 2rem;
+    }
+    &__inactive{
+        display: none;
     }
 }

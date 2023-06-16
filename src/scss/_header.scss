@@ -73,16 +73,21 @@
         }
     }
     &__sidebar{
+        z-index: 1000000;
         &__icon{
             font-size: 3rem;
             color: $gray-color;
             margin: 1rem;
         }
 // this style is for hiding the sidebar
-        &__window-hidden{
-            display: none;
+        .hidden{
+            transform: translateX(100%);
         }
-        &__window-showed{
+        .showed{
+            transform: translateX(0);
+        }
+        &__window{
+            transition: $transition;
             position: fixed;
             top: 0;
             right: 0;
