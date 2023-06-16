@@ -14,7 +14,6 @@ const Contact = () => {
                 </form>
                 <p>By subscribing you agree to our <a href='#'>Terms of Service</a> and <a href='#'>Privacy Policy</a></p>
             </div>
-            <hr />
         </div>
     )
 }

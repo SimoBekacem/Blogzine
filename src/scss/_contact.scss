@@ -2,12 +2,14 @@
     background-color: $tertiary-color;
     grid-column: full-start / full-end ;
     color: $white-color;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
     align-items: center;
     padding: 5.5rem 9rem;
     border-bottom: 1px solid $gray-color;
     &__logo{
+        justify-self: center;
         width: 20rem;
         display: flex;
         gap: 0.25rem;
@@ -31,9 +33,9 @@
         font-family: $paragraphs-font-family;
         font-weight: 300;
         margin: 0;
-        width: 40%;
     }
     &__form{
+        justify-self: center;
         form{
             display: flex;
             align-items: center;
@@ -45,7 +47,6 @@
                 border-radius: 0.5rem;
                 padding: 1rem 10rem 1rem 1rem;
                 font-size: 1rem;
-                width: 25rem;
             }
             button{
                 height: 4rem;

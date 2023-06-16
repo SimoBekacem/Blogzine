@@ -37,9 +37,6 @@
                     font-size: 1.5rem;
                     margin-right: 1rem;
                     cursor: pointer;
-                    &:hover{
-                        color: $primary-color;
-                    }
                 }
             }
         }
@@ -110,6 +107,11 @@
             gap: 1rem;
             img{
                 width: 55%;
+                cursor: pointer;
+                transition: $transition;
+                &:hover{
+                    transform: scale(1.05);
+                }
             }
         }
     }
@@ -127,6 +129,12 @@
                 grid-template-columns: repeat(auto-fit,minmax(7rem,max-content));
                 gap: 0.25rem;
                 text-align: center;
+                li{
+                    cursor: pointer;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
             }
         }
     }

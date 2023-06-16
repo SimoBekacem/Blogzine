@@ -146,6 +146,27 @@ html {
 .Header__dropdowns a {
   font-size: 1.5rem;
 }
+.Header__dropdowns li ul li {
+  padding: 0.5rem 3rem 0.5rem 2rem;
+  transition: all 0.4s ease-in-out;
+}
+.Header__dropdowns li ul li a {
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+}
+.Header__dropdowns li ul li a:not(.not_hover):hover {
+  background-color: transparent;
+  color: #2164E8;
+  scale: 1.1;
+}
+.Header__dropdowns__Home ul {
+  overflow: hidden;
+}
+.Header__dropdowns__Pages ul {
+  overflow: visible;
+}
 .Header__subscribe {
   height: 3rem;
   width: 7rem;
@@ -257,6 +278,98 @@ html {
 }
 .Header__sidebar__window-showed .informations p {
   margin: 0 1rem;
+}
+.Header__Lifestyle__minipage {
+  width: 100%;
+  z-index: 1000000;
+}
+.Header__Lifestyle__minipage__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.Header__Lifestyle__minipage__container .card {
+  width: 20%;
+  text-align: center;
+  padding: 1rem;
+  background-color: #E9EFFD;
+  margin-bottom: 2rem;
+}
+.Header__Lifestyle__minipage__container .card p {
+  font-size: 1rem;
+  color: #595D69;
+  width: 80%;
+  margin: 1rem auto;
+}
+.Header__Lifestyle__minipage__container .card button {
+  height: 3rem;
+  padding: 0.5rem;
+  width: 16rem;
+  margin: 1rem auto;
+  color: #191A1F;
+  background-color: #F7C32D;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+.Header__Lifestyle__minipage__container .card h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #191A1F;
+  display: block;
+  margin: 1rem;
+}
+.Header__Lifestyle__minipage__container__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 25%;
+}
+.Header__Lifestyle__minipage__container__item__image {
+  justify-self: center;
+}
+.Header__Lifestyle__minipage__container__item__image img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.Header__Lifestyle__minipage__container__item__title h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #191A1F;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+.Header__Lifestyle__minipage__container__item__title ul {
+  display: flex;
+  justify-content: center;
+}
+.Header__Lifestyle__minipage__tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 1rem;
+}
+.Header__Lifestyle__minipage__tags a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #191A1F;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+.Header__Lifestyle__minipage__tags a:hover {
+  background-color: #E9EFFD;
+  color: #595D69;
+}
+.Header__Lifestyle__minipage__tags h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #191A1F;
+  display: block;
+  margin: 1rem;
 }
 
 .TrandingSlider {
@@ -681,7 +794,7 @@ html {
 .SliderNews__slidercontainer {
   position: relative;
   width: 100%;
-  height: 45vh;
+  height: 35rem;
   overflow: hidden;
 }
 .SliderNews__slidercontainer__slide {
@@ -740,6 +853,7 @@ html {
   align-items: center;
   gap: 3rem;
   font-size: 4rem;
+  margin-bottom: 4rem;
 }
 .SliderNews__buttons i {
   cursor: pointer;
@@ -749,13 +863,15 @@ html {
   background-color: #191A1F;
   grid-column: full-start/full-end;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
   align-items: center;
   padding: 5.5rem 9rem;
   border-bottom: 1px solid #595D69;
 }
 .Contact__logo {
+  justify-self: center;
   width: 20rem;
   display: flex;
   gap: 0.25rem;
@@ -779,7 +895,9 @@ html {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
   margin: 0;
-  width: 40%;
+}
+.Contact__form {
+  justify-self: center;
 }
 .Contact__form form {
   display: flex;
@@ -793,7 +911,6 @@ html {
   border-radius: 0.5rem;
   padding: 1rem 10rem 1rem 1rem;
   font-size: 1rem;
-  width: 25rem;
 }
 .Contact__form form button {
   height: 4rem;
@@ -856,9 +973,6 @@ html {
   font-size: 1.5rem;
   margin-right: 1rem;
   cursor: pointer;
-}
-.Links__recentpost div ul li:hover {
-  color: #2164E8;
 }
 .Links__Navigation h1 {
   font-size: 2rem;
@@ -923,6 +1037,11 @@ html {
 }
 .Links__mobileapp__download img {
   width: 55%;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.Links__mobileapp__download img:hover {
+  transform: scale(1.05);
 }
 .Links__footer {
   margin-top: 6rem;
@@ -939,8 +1058,61 @@ html {
   gap: 0.25rem;
   text-align: center;
 }
+.Links__footer__topics ul li {
+  cursor: pointer;
+}
+.Links__footer__topics ul li:hover {
+  color: #2164E8;
+}
 
 .Footer {
-  background-color: aqua;
+  background-color: #111216;
   grid-column: full-start/full-end;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  padding: 3rem 9rem;
+  align-items: center;
+}
+.Footer__text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+.Footer__text span {
+  color: red;
+  font-size: 2rem;
+}
+.Footer__links {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.Footer__links a {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.Footer__links a:hover {
+  color: #2164E8;
+}
+.Footer__links__languages {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #595D69;
+  color: #fff;
+}
+.Footer__links__languages li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.Footer__links__languages li:hover {
+  color: #E9EFFD;
+  scale: 1.1;
 }
