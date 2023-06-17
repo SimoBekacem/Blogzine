@@ -49,7 +49,7 @@ const SliderNews = () => {
     React.useEffect(() => {
         const interval = setInterval(() => {
             handleCounter('left');
-        }, 5000);
+        }, 10000);
         return () => clearInterval(interval);
     }, []);
     return (
