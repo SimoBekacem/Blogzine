@@ -60,12 +60,15 @@
                 }
             }
             button{
-                background-color: transparent;
                 font-size: 1.5rem;
                 background-color:$technology-color ;
                 border-radius: 50%;
                 color:$black-color ;
                 border: none;
+                cursor: pointer;
+                ul>li{
+                    cursor: pointer;
+                }
             }
             
         }

@@ -31,6 +31,25 @@ html {
   }
 }
 
+.App_darkmode {
+  background-color: black;
+}
+.App_darkmode p, .App_darkmode h1, .App_darkmode h2, .App_darkmode h3, .App_darkmode h4, .App_darkmode h5, .App_darkmode h6, .App_darkmode a, .App_darkmode li {
+  color: white;
+}
+.App_darkmode .ParametersAndLinks__links > a, .App_darkmode .ParametersAndLinks__parameters > a {
+  color: white;
+}
+.App_darkmode .ParametersAndLinks__links > a:hover, .App_darkmode .ParametersAndLinks__parameters > a:hover {
+  color: #2164E8;
+}
+.App_darkmode .TopToday__title h2, .App_darkmode .TopToday__title p, .App_darkmode .SliderNews__title h1, .App_darkmode .SliderNews__title p, .App_darkmode .SliderNews__slidercontainer__slide__content h1, .App_darkmode .SliderNews__slidercontainer__slide__content li, .App_darkmode .SliderNews__buttons i {
+  color: white;
+}
+.App_darkmode .TrandingSlider__slider p, .App_darkmode .dropdown-menu li > a, .App_darkmode .darck_light > li > p, .App_darkmode .darck_light > li > i {
+  color: black;
+}
+
 .Grab {
   background: rgb(131, 58, 180);
   background: linear-gradient(339deg, rgb(131, 58, 180) 0%, rgb(255, 16, 16) 50%, rgb(252, 176, 69) 100%);
@@ -138,12 +157,15 @@ html {
   margin: 0;
 }
 .ParametersAndLinks__parameters .dropdown-center button {
-  background-color: transparent;
   font-size: 1.5rem;
   background-color: #F7C32D;
   border-radius: 50%;
   color: #191A1F;
   border: none;
+  cursor: pointer;
+}
+.ParametersAndLinks__parameters .dropdown-center button ul > li {
+  cursor: pointer;
 }
 
 .Header {

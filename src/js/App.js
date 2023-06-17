@@ -10,12 +10,36 @@ import SliderNews from "./slider_news";
 import Contact from "./contact";
 import Links from "./links";
 import Footer from "./footer";
-
+const html = document.querySelector('html');
 function App() {
+  const [darkMode, setDarkMode] = React.useState('');
+  const switchtodark = (dark) => {
+    setDarkMode(
+      dark ? 'App_darkmode' : ''
+    );
+  }
+  const switchtodarkautomatic = () => {
+    const hour = new Date().getHours();
+    if (hour >= 18 || hour <= 6) {
+      setDarkMode('App_darkmode');
+    } else {
+      setDarkMode('');
+    }
+  }
+  const changefontsize = (size) => {
+    if(size==='A-'){
+      size = 50;
+    }else if(size==='A+'){
+      size = 80;
+    }else{
+      size = 62.5;
+    }
+    html.style.fontSize = size + '%';
+  }
   return (
-    <div className="App">
+    <div className={`App ${darkMode}`}>
       <Grab />
-      <ParametersAndLinks />
+      <ParametersAndLinks changefontsize={changefontsize} autodarkmode={switchtodarkautomatic} darkmode={switchtodark}/>
       <Header />
       <TrandingSlider />
       <BestTitle />

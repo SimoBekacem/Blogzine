@@ -1,5 +1,5 @@
 import React from 'react';
-const ParametersAndLinks = () => {
+const ParametersAndLinks = (props) => {
     return (
         <div className='ParametersAndLinks'>
             <div className='ParametersAndLinks__links'>
@@ -10,18 +10,18 @@ const ParametersAndLinks = () => {
             </div>
             <div className='ParametersAndLinks__parameters'>
                 <div className='ParametersAndLinks__parameters__item'>
-                    <h1>A-</h1>
-                    <h1>A</h1>
-                    <h1>A+</h1>
+                    <h1 onClick={()=>{props.changefontsize("A-")}}>A-</h1>
+                    <h1 onClick={()=>{props.changefontsize("A")}}>A</h1>
+                    <h1 onClick={()=>{props.changefontsize("A+")}}>A+</h1>
                 </div>
                 <div className="dropdown-center">
                     <button className="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i className="fa-solid fa-circle-half-stroke"></i>
                     </button>
-                    <ul className="dropdown-menu">
-                        <li><i className="fa-regular fa-sun"></i><p>Light</p></li>
-                        <li><i className="fa-solid fa-moon"></i><p>Dark</p></li>
-                        <li><i className="fa-solid fa-circle-half-stroke"></i><p>Auto</p></li>
+                    <ul className="dropdown-menu darck_light">
+                        <li onClick={()=>{props.darkmode(false)}}><i className="fa-regular fa-sun" ></i><p>Light</p></li>
+                        <li onClick={()=>{props.darkmode(true)}}><i className="fa-solid fa-moon" ></i><p>Dark</p></li>
+                        <li onClick={()=>{props.autodarkmode()}}><i className="fa-solid fa-circle-half-stroke"></i><p>Auto</p></li>
                     </ul>
                 </div>
                 <a href="#"><i className="fa-brands fa-square-facebook"></i></a>

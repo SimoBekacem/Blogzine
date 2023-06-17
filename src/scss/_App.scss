@@ -1,0 +1,18 @@
+.App_darkmode{
+    background-color: black;
+    p ,h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,a,li{
+        color: white;
+    }
+    .ParametersAndLinks__links>a,.ParametersAndLinks__parameters>a{
+        color: white;
+        &:hover{
+            color: #2164E8;
+        }
+    }
+    .TopToday__title h2,.TopToday__title p,.SliderNews__title h1,.SliderNews__title p,.SliderNews__slidercontainer__slide__content h1,.SliderNews__slidercontainer__slide__content li,.SliderNews__buttons i{
+        color: white;
+    }
+    .TrandingSlider__slider p,.dropdown-menu li>a, .darck_light>li>p,.darck_light>li>i{
+        color: black;
+    }
+}
