@@ -1,141 +1,143 @@
-.Links{
-    background-color: $tertiary-color;
-    grid-column: full-start / full-end ;
-    padding: 5rem 9rem;
-    color: $white-color;
-    &__divs{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(25rem,max-content));
-    }
-    &__recentpost{
-        h1{
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-        }
-        div{
-            margin-top: 4rem;
-            h3{
-                font-size: 1.5rem;
-                background-color: $primary-color;
-                width: min-content;
-                padding: 0.5rem 1rem;
-                border-radius: 0.5rem;
-            }
-            h1{
-                font-size: 1.75rem;
-                font-weight: 400;
-                margin: 1.5rem 0;
-                width: 90%;
-            }
-            ul{
-                list-style: none;
-                display: flex;
-                width: 70%;
-                justify-content: space-between;
-                li{
-                    font-size: 1.5rem;
-                    margin-right: 1rem;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-    &__Navigation{
-        h1{
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 3rem;
-        }
-        &__links{
-            display: flex;
-            justify-content: space-between;
-            width: 80%;
-            ul{
-                padding: 0;
-                list-style: none;
-                font-size: 1.5rem;
-                li{
-                    margin-bottom: 0.75rem;
-                    cursor: pointer;
-                    &:hover{
-                        color: $primary-color;
-                    }
-                }
-            }
-        }
-    }
-    &__social{
-        h1{
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 3rem;
-        }
-        ul{
-            padding: 0;
-            list-style: none;
-            font-size: 1.5rem;
-            i{
-                margin-right: 1rem;
-                font-size: 2.25rem;
-            }
-            li{
-                margin-bottom: 0.75rem;
-                cursor: pointer;
-                &:hover{
-                    color: $primary-color;
-                }
-            }
-        }
-    }
-    &__mobileapp{
-        width: 80%;
-        margin: 0 auto;
-        h1{
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 3rem;
-        }
-        p{
-            font-size: 1.45rem;
-            margin-bottom: 2rem;
-            
-        }
-        &__download{
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            img{
-                width: 55%;
-                cursor: pointer;
-                transition: $transition;
-                &:hover{
-                    transform: scale(1.05);
-                }
-            }
-        }
-    }
-    &__footer{
-        margin-top: 6rem;
-        h1{
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-        &__topics{
-            ul{
-                list-style: none;
-                display: grid;
-                grid-template-columns: repeat(auto-fit,minmax(7rem,max-content));
-                gap: 0.25rem;
-                text-align: center;
-                li{
-                    cursor: pointer;
-                    &:hover{
-                        color: $primary-color;
-                    }
-                }
-            }
-        }
-    }
+.Links {
+	background-color: $tertiary-color;
+	grid-column: full-start / full-end;
+	padding: 5rem 9rem;
+	color: $white-color;
+	&__divs {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+	}
+	&__recentpost {
+		h1 {
+			font-size: 2rem;
+			font-weight: 400;
+			margin-bottom: 2rem;
+		}
+		div {
+			margin-top: 4rem;
+			h3 {
+				font-size: 1.5rem;
+				background-color: $primary-color;
+				width: min-content;
+				padding: 0.5rem 1rem;
+				border-radius: 0.5rem;
+			}
+			h1 {
+				font-size: 1.75rem;
+				font-weight: 400;
+				margin: 1.5rem 0;
+				width: 90%;
+			}
+			ul {
+				list-style: none;
+				display: flex;
+				width: 70%;
+				justify-content: space-between;
+				li {
+					font-size: 1.5rem;
+					margin-right: 1rem;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	&__Navigation {
+		h1 {
+			font-size: 2rem;
+			font-weight: 400;
+			margin-bottom: 3rem;
+		}
+		&__links {
+			display: flex;
+			justify-content: space-between;
+			width: 80%;
+			ul {
+				padding: 0;
+				list-style: none;
+				font-size: 1.5rem;
+				li {
+					margin-bottom: 0.75rem;
+					cursor: pointer;
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+	&__social {
+		h1 {
+			font-size: 2rem;
+			font-weight: 400;
+			margin-bottom: 3rem;
+		}
+		ul {
+			padding: 0;
+			list-style: none;
+			font-size: 1.5rem;
+			i {
+				margin-right: 1rem;
+				font-size: 2.25rem;
+			}
+			li {
+				margin-bottom: 0.75rem;
+				cursor: pointer;
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	&__mobileapp {
+		width: 80%;
+		margin: 0 auto;
+		h1 {
+			font-size: 2rem;
+			font-weight: 400;
+			margin-bottom: 3rem;
+		}
+		p {
+			font-size: 1.45rem;
+			margin-bottom: 2rem;
+		}
+		&__download {
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+			img {
+				width: 55%;
+				cursor: pointer;
+				transition: $transition;
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+	&__footer {
+		margin-top: 6rem;
+		h1 {
+			font-size: 2rem;
+			font-weight: 400;
+			margin-bottom: 1rem;
+		}
+		&__topics {
+			ul {
+				list-style: none;
+				display: grid;
+				grid-template-columns: repeat(
+					auto-fit,
+					minmax(7rem, max-content)
+				);
+				gap: 0.25rem;
+				text-align: center;
+				li {
+					cursor: pointer;
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
 }

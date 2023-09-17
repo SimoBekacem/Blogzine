@@ -3,53 +3,58 @@
 $titles-font-family: 'Nunito Sans', sans-serif;
 $paragraphs-font-family: 'Rubik', sans-serif;
 //fonts colors
-$black-color: #191A1F;
+$black-color: #191a1f;
 $white-color: #fff;
-$gray-color: #595D69;
+$gray-color: #595d69;
 //general background colors
-$primary-color: #2164E8;
-$secondary-color: #E9EFFD;
-$tertiary-color: #191A1F;
+$primary-color: #2164e8;
+$secondary-color: #e9effd;
+$tertiary-color: #191a1f;
 $quaternary-color: #111216;
 //tags background colors
-$subscribe-color: #D7293D;
-$trending-color: #2164E8;
-$technology-color: #F7C32D;
-$lifestyle-color: #D7293D;
-$business-color: #0FBC87;
-$sport-color: #509EF8;
+$subscribe-color: #d7293d;
+$trending-color: #2164e8;
+$technology-color: #f7c32d;
+$lifestyle-color: #d7293d;
+$business-color: #0fbc87;
+$sport-color: #509ef8;
 // transition
 $transition: all 0.4s ease-in-out;
 // screen sizes:
-$very-small-screen: 31.25em;//mobile 500px
-$small-screen: 48.125em;//mobile 770px
-$medium-screen: 56.25em;//tablet 900px
-$large-screen: 64em;//desktop 1024px
-$extra-large-screen: 1800px;//large desktop
+$very-small-screen: 31.25em; //mobile 500px
+$small-screen: 48.125em; //mobile 770px
+$medium-screen: 56.25em; //tablet 900px
+$large-screen: 64em; //desktop 1024px
+$extra-large-screen: 1800px; //large desktop
 // restyling the root
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;//1rem = 10px
-    @media only screen and (max-width: $large-screen) {
-        font-size: 50%;//1rem = 8px
-    }
-    @media only screen and (max-width: 346px) {
-        font-size: 37.5%;//1rem = 6px
-    }
+	font-size: 62.5%; //1rem = 10px
+	@media only screen and (max-width: $large-screen) {
+		font-size: 50%; //1rem = 8px
+	}
+	@media only screen and (max-width: 346px) {
+		font-size: 37.5%; //1rem = 6px
+	}
 }
 // because of we work with react we need to set the height and width of the App to 100%
 .App {
-    width: 100vw;
-    overflow-x: hidden;
-    display: grid;
-    grid-template-columns: [full-start] minmax(3rem,1fr) [center-start] repeat(8, [col-start]1fr[col-end]) [center-end] minmax(3rem,1fr) [full-end];
-    @media only screen and (max-width: $very-small-screen) {
-        grid-template-columns: [full-start] 1rem [center-start] repeat(8, [col-start]1fr[col-end]) [center-end] 1rem [full-end];
-
-    }
+	width: 100vw;
+	overflow-x: hidden;
+	display: grid;
+	grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(
+			8,
+			[col-start]1fr[col-end]
+		) [center-end] minmax(3rem, 1fr) [full-end];
+	@media only screen and (max-width: $very-small-screen) {
+		grid-template-columns: [full-start] 1rem [center-start] repeat(
+				8,
+				[col-start]1fr[col-end]
+			) [center-end] 1rem [full-end];
+	}
 }

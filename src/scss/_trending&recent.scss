@@ -1,146 +1,173 @@
-.TrendingAndRecent{
-    grid-column: col-start 6 / center-end ;  
-    padding: 2rem;
-    @media only screen and (max-width: $small-screen){
-        grid-column: center-start / center-end ; 
-    }
-    &__socialmedia{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-        margin: 1rem auto;
-        color: $white-color;
-        i{
-            font-size: 2rem;
-            transition: $transition;
-            margin: 0;
-        }
-        div{
-            width: 31%;
-            padding:3rem 2rem;
-            border-radius: 0.5rem;
-            h1{
-                font-size: 2rem;
-                font-weight: 400;
-                margin-bottom: 1rem;
-            }
-            p{
-                font-size: 1.5rem;
-                font-weight: 300;
-            }
-            h1,p{
-                margin: 0;
-            }
-        }
-        &__facebook{
-            background-color: #5D82D1;
-        }
-        &__instagram{
-            background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);        
-        }
-        &__youtube{
-            background-color: #FF0000;
-        }
-    }
-    &__trending{
-        &__title{
-            font-size: 2.5rem;
-            font-weight: 500;
-            margin: 1rem;
-        }
-        &__topics{
-            text-align: center;
-            h1{
-                padding :2rem;
-                width: 100%;
-                color: $white-color;
-                font-weight: 500;
-                margin: 0;
-            }
-            div{
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius: 1rem;
-                margin: 1rem 0;
-            }
-            &__travel{
-                background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/00.jpg);
-            }
-            &__bussiness{
-                background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/01.jpg);
-            }
-            &__marketing{
-                background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/03.jpg);
-            } 
-            &__photography{
-                background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/04.jpg);
-            }  
-            &__sport{
-                background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/06.jpg);
-            }
-            a{
-                text-decoration: none;
-                color: $black-color;
-                font-size: 2rem;
-                font-weight: 400;
-                margin: 4rem ; 
-                transition: $transition;
-                &:hover{
-                    color: $primary-color;
-                }
-            }
-        }
-    }
-    &__recent{
-        margin-top: 5rem;
-        &__posts{
-            margin-top: 2rem;
-            display: grid;
-            gap:1rem;
-            &__post{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 1rem;
-                &__image{
-                    display: flex;
-                    justify-content: center;
-                    img{
-                        width: 60%;
-                        border-radius: 1rem;
-                        
-                    }
-                    
-                }
-                &__content{
-                    width: 100%;
-                    h1{
-                        font-size: 1.5rem;
-                        font-weight: 500;
-                        margin: 1rem 0;
-                    }
-                    p{
-                        font-size: 1rem;
-                        font-weight: 300;
-                        margin: 1rem 0;
-                    }
-                    a{
-                        text-decoration: none;
-                        color: $black-color;
-                        font-size: 1.5rem;
-                        font-weight: 400;
-                        margin: 1rem 0;
-                        transition: $transition;
-                        &:hover{
-                            color: $primary-color;
-                        }
-                    }
-                }
-            }
-        }
-    }
+.TrendingAndRecent {
+	grid-column: col-start 6 / center-end;
+	padding: 2rem;
+	@media only screen and (max-width: $small-screen) {
+		grid-column: center-start / center-end;
+	}
+	&__socialmedia {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		padding: 1rem;
+		margin: 1rem auto;
+		color: $white-color;
+		i {
+			font-size: 2rem;
+			transition: $transition;
+			margin: 0;
+		}
+		div {
+			width: 31%;
+			padding: 3rem 2rem;
+			border-radius: 0.5rem;
+			h1 {
+				font-size: 2rem;
+				font-weight: 400;
+				margin-bottom: 1rem;
+			}
+			p {
+				font-size: 1.5rem;
+				font-weight: 300;
+			}
+			h1,
+			p {
+				margin: 0;
+			}
+		}
+		&__facebook {
+			background-color: #5d82d1;
+		}
+		&__instagram {
+			background: linear-gradient(
+				45deg,
+				#405de6,
+				#5851db,
+				#833ab4,
+				#c13584,
+				#e1306c,
+				#fd1d1d
+			);
+		}
+		&__youtube {
+			background-color: #ff0000;
+		}
+	}
+	&__trending {
+		&__title {
+			font-size: 2.5rem;
+			font-weight: 500;
+			margin: 1rem;
+		}
+		&__topics {
+			text-align: center;
+			h1 {
+				padding: 2rem;
+				width: 100%;
+				color: $white-color;
+				font-weight: 500;
+				margin: 0;
+			}
+			div {
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 1rem;
+				margin: 1rem 0;
+			}
+			&__travel {
+				background: linear-gradient(
+						rgba(0, 0, 0, 0.5),
+						rgba(0, 0, 0, 0.5)
+					),
+					url(../images/00.jpg);
+			}
+			&__bussiness {
+				background: linear-gradient(
+						rgba(0, 0, 0, 0.5),
+						rgba(0, 0, 0, 0.5)
+					),
+					url(../images/01.jpg);
+			}
+			&__marketing {
+				background: linear-gradient(
+						rgba(0, 0, 0, 0.5),
+						rgba(0, 0, 0, 0.5)
+					),
+					url(../images/03.jpg);
+			}
+			&__photography {
+				background: linear-gradient(
+						rgba(0, 0, 0, 0.5),
+						rgba(0, 0, 0, 0.5)
+					),
+					url(../images/04.jpg);
+			}
+			&__sport {
+				background: linear-gradient(
+						rgba(0, 0, 0, 0.5),
+						rgba(0, 0, 0, 0.5)
+					),
+					url(../images/06.jpg);
+			}
+			a {
+				text-decoration: none;
+				color: $black-color;
+				font-size: 2rem;
+				font-weight: 400;
+				margin: 4rem;
+				transition: $transition;
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	&__recent {
+		margin-top: 5rem;
+		&__posts {
+			margin-top: 2rem;
+			display: grid;
+			gap: 1rem;
+			&__post {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 1rem;
+				&__image {
+					display: flex;
+					justify-content: center;
+					img {
+						width: 60%;
+						border-radius: 1rem;
+					}
+				}
+				&__content {
+					width: 100%;
+					h1 {
+						font-size: 1.5rem;
+						font-weight: 500;
+						margin: 1rem 0;
+					}
+					p {
+						font-size: 1rem;
+						font-weight: 300;
+						margin: 1rem 0;
+					}
+					a {
+						text-decoration: none;
+						color: $black-color;
+						font-size: 1.5rem;
+						font-weight: 400;
+						margin: 1rem 0;
+						transition: $transition;
+						&:hover {
+							color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+	}
 }

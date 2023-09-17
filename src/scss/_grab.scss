@@ -1,44 +1,48 @@
-.Grab{
-    background: rgb(131,58,180);
-    background: linear-gradient(339deg, rgba(131,58,180,1) 0%, rgba(255,16,16,1) 50%, rgba(252,176,69,1) 100%); 
-    padding: 0.5rem;
-    &__title{
-        justify-self: end;
-        align-self: center;
-        h1{
-            font-size: 1.75rem;
-            color:$white-color;
-            font-family: $titles-font-family;
-            font-weight: lighter;
-        }
-        
-    }
-    &__btn{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        button{
-            background-color:$tertiary-color;
-            color: $white-color;
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
-            border: $tertiary-color;
-            font-size: 1.25rem;
-        }
-        i{
-            color:$white-color;
-            font-size: 3rem;
-            float: right;
-            padding: 0.25rem;
-        }
-    }
-    &__active{
-        display: grid;
-        grid-column: full-start / full-end ;
-        grid-template-columns: 58% 40%;
-        gap: 2rem;
-    }
-    &__inactive{
-        display: none;
-    }
+.Grab {
+	background: rgb(131, 58, 180);
+	background: linear-gradient(
+		339deg,
+		rgba(131, 58, 180, 1) 0%,
+		rgba(255, 16, 16, 1) 50%,
+		rgba(252, 176, 69, 1) 100%
+	);
+	padding: 0.5rem;
+	&__title {
+		justify-self: end;
+		align-self: center;
+		h1 {
+			font-size: 1.75rem;
+			color: $white-color;
+			font-family: $titles-font-family;
+			font-weight: lighter;
+		}
+	}
+	&__btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		button {
+			background-color: $tertiary-color;
+			color: $white-color;
+			padding: 0.75rem 1rem;
+			border-radius: 0.5rem;
+			border: $tertiary-color;
+			font-size: 1.25rem;
+		}
+		i {
+			color: $white-color;
+			font-size: 3rem;
+			float: right;
+			padding: 0.25rem;
+		}
+	}
+	&__active {
+		display: grid;
+		grid-column: full-start / full-end;
+		grid-template-columns: 58% 40%;
+		gap: 2rem;
+	}
+	&__inactive {
+		display: none;
+	}
 }

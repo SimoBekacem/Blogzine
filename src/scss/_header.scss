@@ -1,284 +1,281 @@
-.Header{
-    grid-column: full-start / full-end ;
-    padding: 2rem;
-    display: block;
-    &__logo{
-        display: flex;
-        gap: 0.25rem;
-        background-color: $sport-color;
-        align-items: center;
-        padding: 1rem;
-        border-radius: 10% 30% 50% 70%;
-        h1{
-            font-family: $titles-font-family;
-            font-weight: bold;
-            margin: 0;
-            color: $white-color;
-        }
-    }
-    &__dropdowns{
-        margin: 0 auto;
-        gap: 1.5rem;
-        @media only screen and (max-width: $medium-screen){
-            gap:0;
-            margin: 0 1rem;
-        }
-        a{
-            font-size: 1.5rem;
-        }
-        li{
-            ul{
-                li{
-                    padding: 0.5rem 3rem 0.5rem 2rem;
-                    transition: $transition;
-                    a{
-                        padding: 0;
-                        font-size: 1.5rem;
-                        font-weight: 500;
-                        transition: $transition;
-                        &:not(.not_hover):hover{
-                            background-color: transparent;
-                            color: $primary-color;
-                            scale: 1.1;
-                        }
-                        
-                    }
-                }
-            }
-        }
-        &__Home{
-            ul{
-                overflow: hidden;
-            }
-        }
-        &__Pages{
-            ul{
-                overflow:visible ;
-            }
-        }
-    }
-    &__subscribe{
-        height: 3rem;
-        width: 7rem;
-        margin: 1rem 1rem 1rem 0;
-        color: $white-color;
-        background-color: $subscribe-color;
-        border: none;
-        border-radius: 0.5rem;
-    }
-    &__searchbar{
-        align-items: center;
-        input{
-            width: 20rem;
-            height: 4rem;
-            font-size: 2rem;
-        }
-        button{
-            height: 3rem;
-        }
-    }
-    &__sidebar{
-        z-index: 1000000;
-        &__icon{
-            font-size: 3rem;
-            color: $gray-color;
-            margin: 1rem;
-        }
-// this style is for hiding the sidebar
-        .hidden{
-            transform: translateX(100%);
-        }
-        .showed{
-            transform: translateX(0);
-        }
-        &__window{
-            transition: $transition;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 30vw;
-            background-color: $white-color;
-            z-index: 1000;
-            overflow: scroll;
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr;
-            padding: 0 2.5rem;
-            @media only screen and (max-width: $very-small-screen) {
-                width: 100vw;
-            }
-            &--hidden{
-                display: none;
-            }
-            .close{
-                font-size: 3rem;
-                color: $black-color;
-                margin: 1rem;
-                justify-self: end;
-            }
-            .description{
-                a{
-                    width: 13rem;
-                    margin-bottom: 1rem;
-                }
-                font-size: 1.5rem;
-                color: $gray-color;
-                padding: 1rem;
-            }
-            .links{
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                margin-bottom: 2rem;
-                a{
-                    font-size: 1.75rem;
-                    font-weight: bold;
-                    color: $black-color;
-                    text-decoration: none;
-                    transition: $transition;
-                    &:hover{
-                        padding-left: 1rem;
-                        background-color: $secondary-color;
-                        color: $gray-color;
-                    }
-                }
-            }
-            .card{
-                text-align: center;
-                padding: 1rem;
-                background-color: $secondary-color;
-                margin-bottom: 2rem;
-                p{
-                    font-size: 1.5rem;
-                    color: $gray-color;
-                    width: 80%;
-                    margin: 1rem auto;
-                }
-                button{
-                    height: 4rem;
-                    padding: 0.5rem;
-                    width: 16rem;
-                    margin: 1rem auto;
-                    color: $black-color;
-                    background-color: $technology-color;
-                    border: none;
-                    border-radius: 0.5rem;
-                    font-size: 1.5em;
-                }
-            }
-            .informations{
-                margin-bottom: 1rem;
-                span{
-                    font-size: 1rem;
-                    font-weight: bold;
-                    color: $gray-color;
-                    margin: 1rem;
-                }
-                p{
-                    margin:0 1rem;
-                }
-            }
-        }
-    }
-    &__Lifestyle{
-        
-        @media only screen and (max-width:642px) {
-            display: none;
-        }
-        &__minipage{
-            width: 100%;
-            z-index: 1000000;
-            &__container{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-                .card{
-                    width: 20%;
-                    text-align: center;
-                    padding: 1rem;
-                    background-color: $secondary-color;
-                    margin-bottom: 2rem;
-                    p{
-                        font-size: 1rem;
-                        color: $gray-color;
-                        width: 80%;
-                        margin: 1rem auto;
-                    }
-                    button{
-                        height: 3rem;
-                        padding: 0.5rem;
-                        width: max-content;
-                        margin: 1rem auto;
-                        color: $black-color;
-                        background-color: $technology-color;
-                        border: none;
-                        border-radius: 0.5rem;
-                        font-size: 1rem;
-                    }
-                    h1{
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        color: $black-color;
-                        display: block;
-                        margin: 1rem;
-                    }
-                }
-                &__item{
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    gap: 1rem;
-                    width: 25%;
-                    &__image{
-                        justify-self: center;
-                        img{
-                            width: 100%;
-                            border-radius: 2rem;
-                        }
-                    }
-                    &__title{
-                        h1{
-                            font-size: 1rem;
-                            font-weight: bold;
-                            color: $black-color;
-                            display: block;
-                            width: 80%;
-                            margin: 0 auto;
-                            
-                        }
-                        ul{
-                            display: flex;
-                            justify-content: center;
-                        }
-                    }
-                }
-            }
-            &__tags{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 80%;
-                margin: 1rem;
-                a{
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    color: $black-color;
-                    text-decoration: none;
-                    transition: $transition;
-                    &:hover{
-                        background-color: $secondary-color;
-                        color: $gray-color;
-                    }
-                }
-                h1{
-                    font-size: 1.75rem;
-                    font-weight: bold;
-                    color: $black-color;
-                    display: block;
-                    margin: 1rem;
-                }
-            }
-        }
-    }
+.Header {
+	grid-column: full-start / full-end;
+	padding: 2rem;
+	display: block;
+	&__logo {
+		display: flex;
+		gap: 0.25rem;
+		background-color: $sport-color;
+		align-items: center;
+		padding: 1rem;
+		border-radius: 10% 30% 50% 70%;
+		h1 {
+			font-family: $titles-font-family;
+			font-weight: bold;
+			margin: 0;
+			color: $white-color;
+		}
+	}
+	&__dropdowns {
+		margin: 0 auto;
+		gap: 1.5rem;
+		@media only screen and (max-width: $medium-screen) {
+			gap: 0;
+			margin: 0 1rem;
+		}
+		a {
+			font-size: 1.5rem;
+		}
+		li {
+			ul {
+				li {
+					padding: 0.5rem 3rem 0.5rem 2rem;
+					transition: $transition;
+					a {
+						padding: 0;
+						font-size: 1.5rem;
+						font-weight: 500;
+						transition: $transition;
+						&:not(.not_hover):hover {
+							background-color: transparent;
+							color: $primary-color;
+							scale: 1.1;
+						}
+					}
+				}
+			}
+		}
+		&__Home {
+			ul {
+				overflow: hidden;
+			}
+		}
+		&__Pages {
+			ul {
+				overflow: visible;
+			}
+		}
+	}
+	&__subscribe {
+		height: 3rem;
+		width: 7rem;
+		margin: 1rem 1rem 1rem 0;
+		color: $white-color;
+		background-color: $subscribe-color;
+		border: none;
+		border-radius: 0.5rem;
+	}
+	&__searchbar {
+		align-items: center;
+		input {
+			width: 20rem;
+			height: 4rem;
+			font-size: 2rem;
+		}
+		button {
+			height: 3rem;
+		}
+	}
+	&__sidebar {
+		z-index: 1000000;
+		&__icon {
+			font-size: 3rem;
+			color: $gray-color;
+			margin: 1rem;
+		}
+		// this style is for hiding the sidebar
+		.hidden {
+			transform: translateX(100%);
+		}
+		.showed {
+			transform: translateX(0);
+		}
+		&__window {
+			transition: $transition;
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 30vw;
+			background-color: $white-color;
+			z-index: 1000;
+			overflow: scroll;
+			height: 100vh;
+			display: grid;
+			grid-template-columns: 1fr;
+			padding: 0 2.5rem;
+			@media only screen and (max-width: $very-small-screen) {
+				width: 100vw;
+			}
+			&--hidden {
+				display: none;
+			}
+			.close {
+				font-size: 3rem;
+				color: $black-color;
+				margin: 1rem;
+				justify-self: end;
+			}
+			.description {
+				a {
+					width: 13rem;
+					margin-bottom: 1rem;
+				}
+				font-size: 1.5rem;
+				color: $gray-color;
+				padding: 1rem;
+			}
+			.links {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				margin-bottom: 2rem;
+				a {
+					font-size: 1.75rem;
+					font-weight: bold;
+					color: $black-color;
+					text-decoration: none;
+					transition: $transition;
+					&:hover {
+						padding-left: 1rem;
+						background-color: $secondary-color;
+						color: $gray-color;
+					}
+				}
+			}
+			.card {
+				text-align: center;
+				padding: 1rem;
+				background-color: $secondary-color;
+				margin-bottom: 2rem;
+				p {
+					font-size: 1.5rem;
+					color: $gray-color;
+					width: 80%;
+					margin: 1rem auto;
+				}
+				button {
+					height: 4rem;
+					padding: 0.5rem;
+					width: 16rem;
+					margin: 1rem auto;
+					color: $black-color;
+					background-color: $technology-color;
+					border: none;
+					border-radius: 0.5rem;
+					font-size: 1.5em;
+				}
+			}
+			.informations {
+				margin-bottom: 1rem;
+				span {
+					font-size: 1rem;
+					font-weight: bold;
+					color: $gray-color;
+					margin: 1rem;
+				}
+				p {
+					margin: 0 1rem;
+				}
+			}
+		}
+	}
+	&__Lifestyle {
+		@media only screen and (max-width: 642px) {
+			display: none;
+		}
+		&__minipage {
+			width: 100%;
+			z-index: 1000000;
+			&__container {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1rem;
+				.card {
+					width: 20%;
+					text-align: center;
+					padding: 1rem;
+					background-color: $secondary-color;
+					margin-bottom: 2rem;
+					p {
+						font-size: 1rem;
+						color: $gray-color;
+						width: 80%;
+						margin: 1rem auto;
+					}
+					button {
+						height: 3rem;
+						padding: 0.5rem;
+						width: max-content;
+						margin: 1rem auto;
+						color: $black-color;
+						background-color: $technology-color;
+						border: none;
+						border-radius: 0.5rem;
+						font-size: 1rem;
+					}
+					h1 {
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: $black-color;
+						display: block;
+						margin: 1rem;
+					}
+				}
+				&__item {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 1rem;
+					width: 25%;
+					&__image {
+						justify-self: center;
+						img {
+							width: 100%;
+							border-radius: 2rem;
+						}
+					}
+					&__title {
+						h1 {
+							font-size: 1rem;
+							font-weight: bold;
+							color: $black-color;
+							display: block;
+							width: 80%;
+							margin: 0 auto;
+						}
+						ul {
+							display: flex;
+							justify-content: center;
+						}
+					}
+				}
+			}
+			&__tags {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 80%;
+				margin: 1rem;
+				a {
+					font-size: 1.5rem;
+					font-weight: bold;
+					color: $black-color;
+					text-decoration: none;
+					transition: $transition;
+					&:hover {
+						background-color: $secondary-color;
+						color: $gray-color;
+					}
+				}
+				h1 {
+					font-size: 1.75rem;
+					font-weight: bold;
+					color: $black-color;
+					display: block;
+					margin: 1rem;
+				}
+			}
+		}
+	}
 }

@@ -1,76 +1,75 @@
-.ParametersAndLinks{
-    grid-column: center-start / center-end ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: 2px solid $gray-color;
-    @media only screen and (max-width: $medium-screen){
-        display: none;
-    }
-    a{
-        color: $gray-color;
-        font-size: 2rem;
-        &:hover{
-            color: $black-color;
-        }
-    }
-    &__links{
-        display: flex;
-        gap: 2rem;
-        a{
-            text-decoration: none;
-            font-size: 1.45rem;
-            color:$gray-color;
-            &:hover{
-                color: $black-color;
-            }
-        }
-    }
-    &__parameters{
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        &__item{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 2px solid $primary-color;
-            border-radius: 0.5rem;
-            padding:0 1rem;
-            h1{
-                padding: 0.5rem;
-                font-size: 1.25rem;
-                color: $primary-color;
-                margin: 0;
-                cursor: pointer;
-            }
-        }
-        .dropdown-center{
-            ul{
-                li{
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    font-size: 1.5rem;
-                    padding: 0.75rem;
-                    p{
-                        margin: 0;
-                    }
-                }
-            }
-            button{
-                font-size: 1.5rem;
-                background-color:$technology-color ;
-                border-radius: 50%;
-                color:$black-color ;
-                border: none;
-                cursor: pointer;
-                ul>li{
-                    cursor: pointer;
-                }
-            }
-            
-        }
-    }
+.ParametersAndLinks {
+	grid-column: center-start / center-end;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	border-bottom: 2px solid $gray-color;
+	@media only screen and (max-width: $medium-screen) {
+		display: none;
+	}
+	a {
+		color: $gray-color;
+		font-size: 2rem;
+		&:hover {
+			color: $black-color;
+		}
+	}
+	&__links {
+		display: flex;
+		gap: 2rem;
+		a {
+			text-decoration: none;
+			font-size: 1.45rem;
+			color: $gray-color;
+			&:hover {
+				color: $black-color;
+			}
+		}
+	}
+	&__parameters {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		&__item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border: 2px solid $primary-color;
+			border-radius: 0.5rem;
+			padding: 0 1rem;
+			h1 {
+				padding: 0.5rem;
+				font-size: 1.25rem;
+				color: $primary-color;
+				margin: 0;
+				cursor: pointer;
+			}
+		}
+		.dropdown-center {
+			ul {
+				li {
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					font-size: 1.5rem;
+					padding: 0.75rem;
+					p {
+						margin: 0;
+					}
+				}
+			}
+			button {
+				font-size: 1.5rem;
+				background-color: $technology-color;
+				border-radius: 50%;
+				color: $black-color;
+				border: none;
+				cursor: pointer;
+				ul > li {
+					cursor: pointer;
+				}
+			}
+		}
+	}
 }
