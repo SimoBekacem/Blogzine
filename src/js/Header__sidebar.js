@@ -1,22 +1,30 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { closeSideBar } from './redux/slices/sideBarSlice';
 import logo from '../images/logo.png';
+
 const Header__sidebar = () => {
-	const [sidebar, setSidebar] = React.useState(false);
-	const showSidebar = () => setSidebar(!sidebar);
+	const isOpen = useSelector((state) => state.sideBar.isOpen);
+	const dispatch = useDispatch();
 	return (
 		<div className="Header__sidebar">
 			<i
 				className="Header__sidebar__icon fa-solid fa-bars-staggered fa-rotate-180"
-				onClick={showSidebar}
+				onClick={() => {
+					dispatch(closeSideBar());
+				}}
 			></i>
 			<div
 				className={`Header__sidebar__window ${
-					sidebar ? 'showed' : 'hidden'
+					isOpen ? 'showed' : 'hidden'
 				}`}
 			>
 				<i
 					className="close fa-solid fa-xmark"
-					onClick={showSidebar}
+					onClick={() => {
+						dispatch(closeSideBar());
+					}}
 				></i>
 				<div className="description">
 					<a className="navbar-brand Header__logo" href="#">

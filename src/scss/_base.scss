@@ -35,6 +35,7 @@ $extra-large-screen: 1800px; //large desktop
 
 html {
 	font-size: 62.5%; //1rem = 10px
+	transition: $transition;
 	@media only screen and (max-width: $large-screen) {
 		font-size: 50%; //1rem = 8px
 	}
@@ -47,14 +48,15 @@ html {
 	width: 100vw;
 	overflow-x: hidden;
 	display: grid;
-	grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(
+	grid-template-columns:
+		[full-start] minmax(3rem, 1fr) [center-start] repeat(
 			8,
 			[col-start]1fr[col-end]
-		) [center-end] minmax(3rem, 1fr) [full-end];
+		)
+		[center-end] minmax(3rem, 1fr) [full-end];
 	@media only screen and (max-width: $very-small-screen) {
-		grid-template-columns: [full-start] 1rem [center-start] repeat(
-				8,
-				[col-start]1fr[col-end]
-			) [center-end] 1rem [full-end];
+		grid-template-columns:
+			[full-start] 1rem [center-start] repeat(8, [col-start]1fr[col-end])
+			[center-end] 1rem [full-end];
 	}
 }

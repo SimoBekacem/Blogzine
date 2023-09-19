@@ -1,5 +1,14 @@
 import React from 'react';
-const ParametersAndLinks = (props) => {
+import { useDispatch } from 'react-redux';
+
+import {
+	switchToDark,
+	switchToDarkAutomaticly,
+	changeFontSize,
+} from './redux/slices/configSlice';
+
+const ParametersAndLinks = () => {
+	const dispatch = useDispatch();
 	return (
 		<div className="ParametersAndLinks">
 			<div className="ParametersAndLinks__links">
@@ -20,21 +29,21 @@ const ParametersAndLinks = (props) => {
 				<div className="ParametersAndLinks__parameters__item">
 					<h1
 						onClick={() => {
-							props.changefontsize('A-');
+							dispatch(changeFontSize('A-'));
 						}}
 					>
 						A-
 					</h1>
 					<h1
 						onClick={() => {
-							props.changefontsize('A');
+							dispatch(changeFontSize('A'));
 						}}
 					>
 						A
 					</h1>
 					<h1
 						onClick={() => {
-							props.changefontsize('A+');
+							dispatch(changeFontSize('A+'));
 						}}
 					>
 						A+
@@ -52,7 +61,7 @@ const ParametersAndLinks = (props) => {
 					<ul className="dropdown-menu darck_light">
 						<li
 							onClick={() => {
-								props.darkmode(false);
+								dispatch(switchToDark(false));
 							}}
 						>
 							<i className="fa-regular fa-sun"></i>
@@ -60,7 +69,7 @@ const ParametersAndLinks = (props) => {
 						</li>
 						<li
 							onClick={() => {
-								props.darkmode(true);
+								dispatch(switchToDark(true));
 							}}
 						>
 							<i className="fa-solid fa-moon"></i>
@@ -68,7 +77,7 @@ const ParametersAndLinks = (props) => {
 						</li>
 						<li
 							onClick={() => {
-								props.autodarkmode();
+								dispatch(switchToDarkAutomaticly());
 							}}
 						>
 							<i className="fa-solid fa-circle-half-stroke"></i>

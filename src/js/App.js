@@ -6,48 +6,26 @@ import TrandingSlider from './tranding_slider';
 import BestTitle from './best_title';
 import TopToday from './top_today';
 import TrendingAndRecent from './trending&recent';
-import SliderNews from './slider_news';
+import News from './news';
 import Contact from './contact';
 import Links from './links';
 import Footer from './footer';
+import { useSelector } from 'react-redux';
 const html = document.querySelector('html');
 function App() {
-	const [darkMode, setDarkMode] = React.useState('');
-	const switchtodark = (dark) => {
-		setDarkMode(dark ? 'App_darkmode' : '');
-	};
-	const switchtodarkautomatic = () => {
-		const hour = new Date().getHours();
-		if (hour >= 18 || hour <= 6) {
-			setDarkMode('App_darkmode');
-		} else {
-			setDarkMode('');
-		}
-	};
-	const changefontsize = (size) => {
-		if (size === 'A-') {
-			size = 50;
-		} else if (size === 'A+') {
-			size = 80;
-		} else {
-			size = 62.5;
-		}
-		html.style.fontSize = size + '%';
-	};
+	const fontSize = useSelector((state) => state.config.fontSize);
+	const darkMode = useSelector((state) => state.config.darkMode);
+	html.style.fontSize = fontSize + '%';
 	return (
 		<div className={`App ${darkMode}`}>
 			<Grab />
-			<ParametersAndLinks
-				changefontsize={changefontsize}
-				autodarkmode={switchtodarkautomatic}
-				darkmode={switchtodark}
-			/>
+			<ParametersAndLinks />
 			<Header />
 			<TrandingSlider />
 			<BestTitle />
 			<TopToday />
 			<TrendingAndRecent />
-			<SliderNews />
+			<News />
 			<Contact />
 			<Links />
 			<Footer />

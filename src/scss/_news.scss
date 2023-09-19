@@ -1,0 +1,26 @@
+.SliderNews {
+	grid-column: center-start / center-end;
+	display: none;
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		h1 {
+			font-size: 3rem;
+			font-weight: 700;
+			color: $black-color;
+			margin-bottom: 2rem;
+			i {
+				font-size: 4rem;
+				margin-right: 1rem;
+			}
+		}
+		p {
+			font-size: 1.5rem;
+			text-decoration: underline;
+			font-weight: 400;
+			color: $gray-color;
+			margin-bottom: 2rem;
+		}
+	}
+}
